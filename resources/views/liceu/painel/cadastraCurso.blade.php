@@ -48,13 +48,6 @@ basic minimal pushable
                     <label>Unidade</label>
                     <select name="unidade" placeholder="Unidade" required>
                         <option value="{{ old('periodo_inicio') ?? ''}}">{{ old('periodo_inicio') ?? ''}}</option>
-                  <--      
-<option value="Sambódromo">Sambódromo</option>
-                        <option value="PE. Pedro Vignola">PE. Pedro Vignola</option>
-                        <option value="Magdalena Arce Daou">Magdalena Arce Daou</option>
-                        <option value="Parintins">Parintins</option>
-                        <option value="Envira">Envira</option>
--->
                         <option value="Liceu Digital Careiro da Várzea ">Liceu Digital Careiro da Várzea </option>
                         <option value="Liceu Digital Codajás">Liceu Digital Codajás</option>
                         <option value="Liceu Digital Fonte Boa">Liceu Digital Fonte Boa</option>
