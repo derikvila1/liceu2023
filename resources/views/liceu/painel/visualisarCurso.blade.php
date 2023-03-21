@@ -57,11 +57,11 @@ basic minimal pushable
                 <label>Unidade</label>
                 <select name="unidade" placeholder="Unidade" required>
                     <option value="{{ old('unidade') ?? $cursos->unidade }}">{{ old('unidade') ?? $cursos->unidade }}</option>
-                    <option value="Sambódromo">Sambódromo</option>
+                    <!-- <option value="Sambódromo">Sambódromo</option>
                     <option value="PE. Pedro Vignola">PE. Pedro Vignola</option>
                     <option value="Magdalena Arce Daou">Magdalena Arce Daou</option>
                     <option value="Parintins">Parintins</option>
-                    <option value="Envira">Envira</option>
+                    <option value="Envira">Envira</option> -->
                     <option value="Liceu Digital Careiro da Várzea ">Liceu Digital Careiro da Várzea </option>
                     <option value="Liceu Digital Codajás">Liceu Digital Codajás</option>
                     <option value="Liceu Digital Fonte Boa">Liceu Digital Fonte Boa</option>
@@ -276,6 +276,10 @@ basic minimal pushable
         <div class="field">
             <label>Pré-Requisito</label>
             <input type="text" name="prerequisito" placeholder="Pré-Requisito" value="{{ old('prerequisito') ?? $cursos->prerequisito }}">
+        </div>
+        <div class="field">
+            <label>Link</label>
+            <input type="text" name="link" placeholder="Link" value="{{ old('link') ?? $cursos->link }}">
         </div>
 
 

@@ -411,6 +411,7 @@ class LiceuAuth extends Controller
             'vagas' => $request->vagas,
             'vagas_reserva' => $request->vagas_reserva,
             'prerequisito' => $request->prerequisito,
+            'link' => $request->link,
             'updated_at' => $hoje
         ]);
         $msg_erro = 'Curso Atualizado com Sucesso';
@@ -825,7 +826,10 @@ class LiceuAuth extends Controller
         }
 
         if ($checkpermission->permission == 710) {
-            $cursos = DB::connection('liceu')->table('cursos')->orderBy('curso')->get();
+            // $cursos = DB::connection('liceu')->table('cursos')->orderBy('curso')->get();
+            // MOSTRA SOMENTE OS LICEUS DIGITAIS
+            $cursos = DB::connection('liceu')->table('cursos')->where('unidade', 'like', '%Digital%')->get();
+
             $unidades = $cursos;
             $horarios = $cursos;
             $unidades =  $unidades->unique('unidade');
