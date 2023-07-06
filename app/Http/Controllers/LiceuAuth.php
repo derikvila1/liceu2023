@@ -679,7 +679,12 @@ class LiceuAuth extends Controller
         }
 
         if ($checkpermission->permission == 710) {
-            $cursos = DB::connection('liceu')->table('cursos')->get();
+
+            // $cursos = DB::connection('liceu')->table('cursos')->get();
+            //mostrar somente os cursos do liceu digital
+            $cursos = DB::connection('liceu')->table('cursos')->where('unidade', 'like', '%Digital%')->get();
+
+
             for ($i = 0; $i < count($cursos); $i++) {
                 $inscricao = DB::connection('liceu')->table('inscricao')->where('curso', $cursos[$i]->uuid)->count();
                 $cursos[$i]->inscritos =  $inscricao;
